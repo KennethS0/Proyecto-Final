@@ -9,6 +9,8 @@
 /MUCYM/[Ll]ogs/
 /MUCYM/[Mm]emoryCaptures/
 
+com.vuforia.engine-10.7.2.tgz
+
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
