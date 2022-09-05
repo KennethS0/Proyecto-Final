@@ -41,6 +41,11 @@ public class ScenesControllerScript : MonoBehaviour
         SceneManager.LoadScene("Herradura");
     }
 
+    public void LoadArmMenu()
+    {
+        SceneManager.LoadScene("ArmMenu");
+    }
+
     public void LoadColorSquares()
     {
         SceneManager.LoadScene("ColorSquaresScene");
