@@ -12,6 +12,7 @@
 /MUCYM/[Pp]ackages/com.ptc.vuforia.engine-10.7.2.tgz
 
 com.vuforia.engine-10.7.2.tgz
+com.vuforia.engine-10.9.3.tgz
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
