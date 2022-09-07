@@ -33,4 +33,21 @@ public class BrazosGameManager : MonoBehaviour
 
 
     }
+
+    public void Test1()
+    {
+        Debug.Log("1");
+    }
+    public void Test2()
+    {
+        Debug.Log("2");
+    }
+    public void Test3()
+    {
+        Debug.Log("3");
+    }
+    public void Test4()
+    {
+        Debug.Log("4");
+    }
 }
