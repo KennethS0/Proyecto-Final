@@ -22,7 +22,7 @@ public class BrazosUI_Manager : MonoBehaviour
     {
         timerLabel.text = "Tiempo\n0:00";
         _victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>();
-        _tipAnimator = tipPanel.GetComponent<Animator>();
+        //_tipAnimator = tipPanel.GetComponent<Animator>();
         tipPanel.SetActive(false);
     }
 
