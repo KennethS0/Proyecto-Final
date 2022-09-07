@@ -6,6 +6,8 @@ public class BrazosGameManager : MonoBehaviour
 {
 
     private BrazosUI_Manager ui_manager;
+    private Animator animator;
+    private float currentTime = 0;
 
     [HideInInspector]
     public int movements;
@@ -16,6 +18,8 @@ public class BrazosGameManager : MonoBehaviour
         ui_manager = GameObject.Find("Canvas").GetComponent<BrazosUI_Manager>();
         movements = 0;
         ui_manager.UpdateMoves(movements);
+
+        animator = gameObject.GetComponent<Animator>();
     }
 
     public void StartTimer()
@@ -34,20 +38,17 @@ public class BrazosGameManager : MonoBehaviour
 
     }
 
-    public void Test1()
+    public void OnButtonRelease()
     {
-        Debug.Log("1");
+        //animator.speed = 0;
     }
-    public void Test2()
+    public void OnButtonPress()
     {
-        Debug.Log("2");
+        animator.Play("Take 001");
+        /*animator.PlayInFixedTime("Take 001", -1, currentTime);
+        animator.speed = 0.1f;
+        currentTime += 0.1f;
+        Debug.Log(currentTime);*/
     }
-    public void Test3()
-    {
-        Debug.Log("3");
-    }
-    public void Test4()
-    {
-        Debug.Log("4");
-    }
+
 }
