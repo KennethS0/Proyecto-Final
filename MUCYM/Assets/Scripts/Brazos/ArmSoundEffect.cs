@@ -5,9 +5,16 @@ using UnityEngine;
 public class ArmSoundEffect : MonoBehaviour
 {
 
-    public AudioSource movementSound;
-    public void MovementSound()
+    public AudioSource movementSoundUp;
+    public AudioSource movementSoundDown;
+    
+    public void MovementSoundUp()
     {
-        movementSound.Play();
+        movementSoundUp.Play();
+    }
+
+    public void MovementSoundDown()
+    {
+        movementSoundDown.Play();
     }
 }

@@ -9,15 +9,11 @@ public class BrazosUI_Manager : MonoBehaviour
     public float time;
     public bool startTimer;
 
-    private Animator _victoryAnimator;
-
-    private Animator _tipAnimator;
-
     // Start is called before the first frame update
     void Start()
     {
         timerLabel.text = "Tiempo\n0:00";
-        _victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>();
+        //_victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>();
         //_tipAnimator = tipPanel.GetComponent<Animator>();
         //tipPanel.SetActive(false);
     }
@@ -65,12 +61,12 @@ public class BrazosUI_Manager : MonoBehaviour
     public void ShowVictoryScreen()
     {
         //Debug.Log("YOU WON!");
-        _victoryAnimator.SetBool("ShowVictory", true);
+        //_victoryAnimator.SetBool("ShowVictory", true);
     }
 
     public void HideVictoryScreen()
     {
-        _victoryAnimator.SetBool("ShowVictory", false);
+        //_victoryAnimator.SetBool("ShowVictory", false);
     }
 
     public void ActivateTip()
@@ -83,11 +79,11 @@ public class BrazosUI_Manager : MonoBehaviour
 
     public void ShowTip()
     {
-        _tipAnimator.SetBool("ShowTip", true);
+        //_tipAnimator.SetBool("ShowTip", true);
     }
 
     public void HideTip()
     {
-        _tipAnimator.SetBool("ShowTip", false);
+        //_tipAnimator.SetBool("ShowTip", false);
     }
 }

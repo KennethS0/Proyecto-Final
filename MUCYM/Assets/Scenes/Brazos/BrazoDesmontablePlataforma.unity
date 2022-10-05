@@ -458,7 +458,6 @@ GameObject:
   - component: {fileID: 635199697}
   - component: {fileID: 635199700}
   - component: {fileID: 635199699}
-  - component: {fileID: 635199698}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -480,19 +479,6 @@ Transform:
   m_Father: {fileID: 1972614464}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &635199698
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635199696}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &635199699
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2036,13 +2022,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675699794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.338, y: 0.001, z: -0.354}
-  m_LocalScale: {x: 0.24586, y: 1, z: 0.24586}
+  m_LocalPosition: {x: -0.335, y: 0.001, z: -0.34}
+  m_LocalScale: {x: 0.24586, y: 0.24586, z: 0.24586}
   m_Children:
   - {fileID: 1913933621}
   - {fileID: 1037176804}
   m_Father: {fileID: 2072622831}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1675699796
 MeshRenderer:
@@ -2063,7 +2049,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7afe5f564423c0478b7206f6d850af4, type: 2}
+  - {fileID: 2100000, guid: 2ce7cdefbeca78749b8a56b34a04b9f5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2110,21 +2096,21 @@ MonoBehaviour:
   mTrackableName: 
   mInitializedInEditor: 0
   mName: Down
-  mSensitivity: 2
+  mSensitivity: 1
   mHasUpdatedPose: 1
   mPrevTransform:
     e00: 0.24586
     e01: 0
     e02: 0
-    e03: -0.338
+    e03: -0.335
     e10: 0
-    e11: 1
+    e11: 0.24586
     e12: 0
     e13: 0.001
     e20: 0
     e21: 0
     e22: 0.24586
-    e23: -0.354
+    e23: -0.34
     e30: 0
     e31: 0
     e32: 0
@@ -2163,7 +2149,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 6809526614212694743}
         m_TargetAssemblyTypeName: ArmSoundEffect, Assembly-CSharp
-        m_MethodName: MovementSound
+        m_MethodName: MovementSoundDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2178,7 +2164,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6809526614212694741}
         m_TargetAssemblyTypeName: BrazosGameManager, Assembly-CSharp
-        m_MethodName: OnButtonRelease
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2463,7 +2449,6 @@ GameObject:
   - component: {fileID: 1913933621}
   - component: {fileID: 1913933624}
   - component: {fileID: 1913933623}
-  - component: {fileID: 1913933622}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -2485,19 +2470,6 @@ Transform:
   m_Father: {fileID: 1675699795}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1913933622
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913933620}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1913933623
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2654,13 +2626,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972614463}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.338, y: 0.001, z: 0.317}
-  m_LocalScale: {x: 0.24586, y: 1, z: 0.24586}
+  m_LocalPosition: {x: -0.338, y: 0.001, z: 0.299}
+  m_LocalScale: {x: 0.24586, y: 0.24586, z: 0.24586}
   m_Children:
   - {fileID: 635199697}
   - {fileID: 2025043492}
   m_Father: {fileID: 2072622831}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1972614465
 MonoBehaviour:
@@ -2694,7 +2666,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 6809526614212694743}
         m_TargetAssemblyTypeName: ArmSoundEffect, Assembly-CSharp
-        m_MethodName: MovementSound
+        m_MethodName: MovementSoundUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2709,7 +2681,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6809526614212694741}
         m_TargetAssemblyTypeName: BrazosGameManager, Assembly-CSharp
-        m_MethodName: OnButtonRelease
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2785,7 +2757,7 @@ MonoBehaviour:
   mTrackableName: 
   mInitializedInEditor: 0
   mName: Top
-  mSensitivity: 2
+  mSensitivity: 1
   mHasUpdatedPose: 1
   mPrevTransform:
     e00: 0.24586
@@ -2793,13 +2765,13 @@ MonoBehaviour:
     e02: 0
     e03: -0.338
     e10: 0
-    e11: 1
+    e11: 0.24586
     e12: 0
     e13: 0.001
     e20: 0
     e21: 0
     e22: 0.24586
-    e23: 0.317
+    e23: 0.299
     e30: 0
     e31: 0
     e32: 0
@@ -3260,8 +3232,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1675699795}
   - {fileID: 1972614464}
+  - {fileID: 1675699795}
   - {fileID: 6182207313651632238}
   - {fileID: 7619858868568169984}
   - {fileID: 1386142137}
@@ -3386,9 +3358,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0bf3fe356c6d98f49b2953168e229fe4, type: 2}
-  - {fileID: 2100000, guid: 0bf3fe356c6d98f49b2953168e229fe4, type: 2}
-  - {fileID: 2100000, guid: 0bf3fe356c6d98f49b2953168e229fe4, type: 2}
+  - {fileID: 2100000, guid: 01fb864af9ed85649aa4d01f90a686b5, type: 2}
+  - {fileID: 2100000, guid: 01fb864af9ed85649aa4d01f90a686b5, type: 2}
+  - {fileID: 2100000, guid: 01fb864af9ed85649aa4d01f90a686b5, type: 2}
   - {fileID: 9185737683893222716, guid: 42906c081b926984a80ee5cf7057e68b, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -3460,7 +3432,7 @@ Transform:
   - {fileID: 811313372}
   m_Father: {fileID: 6182207313651632238}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0.000014741513, y: -90.00002, z: 81.959404}
+  m_LocalEulerAnglesHint: {x: 0.0000034150944, y: -90.00001, z: 89.39896}
 --- !u!4 &892230325904306155
 Transform:
   m_ObjectHideFlags: 0
@@ -3474,7 +3446,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6182207313651632238}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: -42.518055, y: -178.8517, z: 142.9633}
+  m_LocalEulerAnglesHint: {x: -36.902416, y: -178.90805, z: 143.024}
 --- !u!23 &928485906920158799
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3494,7 +3466,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0bf3fe356c6d98f49b2953168e229fe4, type: 2}
+  - {fileID: 2100000, guid: 01fb864af9ed85649aa4d01f90a686b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3706,7 +3678,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6182207313651632238}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: -72.94415, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -82.28659, y: 180, z: -180}
 --- !u!23 &3390619060319008304
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3727,7 +3699,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 9185737683893222716, guid: 42906c081b926984a80ee5cf7057e68b, type: 3}
-  - {fileID: 2100000, guid: 0bf3fe356c6d98f49b2953168e229fe4, type: 2}
+  - {fileID: 2100000, guid: 01fb864af9ed85649aa4d01f90a686b5, type: 2}
   - {fileID: -8274133419916619345, guid: 42906c081b926984a80ee5cf7057e68b, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -3964,7 +3936,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6182207313651632238}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: -75.573906, y: -0.834857, z: -10.450306}
+  m_LocalEulerAnglesHint: {x: -81.19667, y: -1.3896976, z: -9.895963}
 --- !u!33 &5221696525796972474
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4087,7 +4059,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6809526614212694740}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.06, y: 0, z: 0}
+  m_LocalPosition: {x: -0.04, y: 0, z: 0}
   m_LocalScale: {x: 0.07, y: 0.12, z: 0.08999999}
   m_Children:
   - {fileID: 6135993928018292096}
@@ -4154,9 +4126,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6182207313651632238}
   - component: {fileID: 6809526614212694744}
-  - component: {fileID: 6809526614212694743}
   - component: {fileID: 6809526614212694742}
+  - component: {fileID: 6809526614212694745}
   - component: {fileID: 6809526614212694741}
+  - component: {fileID: 6809526614212694743}
   m_Layer: 0
   m_Name: brazo_desmontable
   m_TagString: Untagged
@@ -4177,6 +4150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movements: 0
+  movementSound: {fileID: 6809526614212694742}
 --- !u!82 &6809526614212694742
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4187,7 +4161,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b895da21c41746a4fb0cc2fd3a05514c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 794e260ff9e68554b9e6cfd54694cefc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -4285,7 +4259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862517cddd21aa94e9d14232dbd3953f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSound: {fileID: 6809526614212694742}
+  movementSoundUp: {fileID: 6809526614212694742}
+  movementSoundDown: {fileID: 6809526614212694745}
 --- !u!95 &6809526614212694744
 Animator:
   serializedVersion: 3
@@ -4305,6 +4280,102 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &6809526614212694745
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6809526614212694740}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b895da21c41746a4fb0cc2fd3a05514c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &6926855313153179933
 Transform:
   m_ObjectHideFlags: 0
@@ -4381,7 +4452,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6182207313651632238}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -80.61688, y: 180, z: -180}
+  m_LocalEulerAnglesHint: {x: -55.827366, y: 180, z: 180}
 --- !u!4 &7619858868568169984
 Transform:
   m_ObjectHideFlags: 0
@@ -4542,7 +4613,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6182207313651632238}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -43.127617, y: 173.05577, z: 168.24841}
+  m_LocalEulerAnglesHint: {x: -37.519714, y: 173.61584, z: 167.36034}
 --- !u!4 &8553532372234076407
 Transform:
   m_ObjectHideFlags: 0
