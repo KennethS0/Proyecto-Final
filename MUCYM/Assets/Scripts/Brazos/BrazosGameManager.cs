@@ -22,6 +22,8 @@ public class BrazosGameManager : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
     }
 
+    
+
     public void StartTimer()
     {
         ui_manager.StartTimer();
@@ -44,9 +46,7 @@ public class BrazosGameManager : MonoBehaviour
     }
     public void OnButtonPress()
     {
-        Debug.Log("On Press GM");
         animator.Play("Take 001");
-        Debug.Log("Despues de la anim");  
         /*animator.PlayInFixedTime("Take 001", -1, currentTime);
         animator.speed = 0.1f;
         currentTime += 0.1f;
