@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -225,7 +225,7 @@ Transform:
   m_LocalScale: {x: 0.0602585, y: 0.0602585, z: 0.0602585}
   m_Children: []
   m_Father: {fileID: 7619858867108642327}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &76207865
 MeshFilter:
@@ -3084,7 +3084,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1033007170399985371}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 26.806046, y: 123.89839, z: -87.681335}
+  m_LocalEulerAnglesHint: {x: 37.994576, y: 122.40207, z: -107.47165}
 --- !u!23 &2262080175245108317
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3278,7 +3278,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b895da21c41746a4fb0cc2fd3a05514c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3393,7 +3393,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 794e260ff9e68554b9e6cfd54694cefc, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3499,7 +3499,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2877376877613028729}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 41.31971, y: -169.33752, z: 1.2311417}
+  m_LocalEulerAnglesHint: {x: 47.597153, y: -171.26416, z: -2.4221537}
 --- !u!1 &4374880754662432483
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,7 +3632,7 @@ Transform:
   - {fileID: 2129434756}
   m_Father: {fileID: 2877376877613028729}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: -79.40479, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -77.399536, y: 180, z: -180}
 --- !u!33 &5958284872132867045
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3919,7 +3919,7 @@ MonoBehaviour:
   mTrackableName: 
   mInitializedInEditor: 0
   mName: Down
-  mSensitivity: 0
+  mSensitivity: 1
   mHasUpdatedPose: 1
   mPrevTransform:
     e00: 0.24586
@@ -4117,6 +4117,7 @@ Transform:
   - {fileID: 1820450109}
   - {fileID: 1670121587}
   - {fileID: 1791831050}
+  - {fileID: 76207864}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4164,7 +4165,7 @@ MonoBehaviour:
   mTrackableName: 
   mInitializedInEditor: 0
   mName: Top
-  mSensitivity: 0
+  mSensitivity: 1
   mHasUpdatedPose: 1
   mPrevTransform:
     e00: 0.24586

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4385362, g: 0.48663962, b: 0.56690985, a: 1}
+  m_IndirectSpecularColor: {r: 0.43853626, g: 0.48663783, b: 0.5669091, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4136,7 +4136,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 794e260ff9e68554b9e6cfd54694cefc, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4265,7 +4265,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b895da21c41746a4fb0cc2fd3a05514c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4496,7 +4496,7 @@ Transform:
   m_Father: {fileID: 6182207313651632238}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -55.827366, y: 180, z: 180}
---- !u!4 &7619858868568169984
+--- !u!4 &7619858868568169984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1145297979932998905, guid: 2f914dd1a17b49540a7df0e67feb82fa,
     type: 3}
