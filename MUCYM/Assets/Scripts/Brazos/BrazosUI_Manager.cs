@@ -9,10 +9,6 @@ public class BrazosUI_Manager : MonoBehaviour
     public float time;
     public bool startTimer;
 
-    public Text movementsLabel;
-
-    public GameObject tipPanel;
-
     private Animator _victoryAnimator;
 
     private Animator _tipAnimator;
@@ -23,7 +19,7 @@ public class BrazosUI_Manager : MonoBehaviour
         timerLabel.text = "Tiempo\n0:00";
         _victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>();
         //_tipAnimator = tipPanel.GetComponent<Animator>();
-        tipPanel.SetActive(false);
+        //tipPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -63,7 +59,7 @@ public class BrazosUI_Manager : MonoBehaviour
 
     public void UpdateMoves(int moves)
     {
-        movementsLabel.text = "Movimientos:\n" + moves.ToString();
+        //movementsLabel.text = "Movimientos:\n" + moves.ToString();
     }
 
     public void ShowVictoryScreen()
@@ -79,9 +75,9 @@ public class BrazosUI_Manager : MonoBehaviour
 
     public void ActivateTip()
     {
-        tipPanel.SetActive(true);
-        AudioSource asTip = tipPanel.GetComponent<AudioSource>();
-        asTip.Play();
+        //tipPanel.SetActive(true);
+        //AudioSource asTip = tipPanel.GetComponent<AudioSource>();
+        //asTip.Play();
         //Handheld.Vibrate();
     }
 
