@@ -13,25 +13,15 @@ public class CubeSelector : MonoBehaviour
 
     private void RayCastToScreen(Vector2 position)
     {
-        print("Touch");
         Ray ray = Camera.main.ScreenPointToRay(position);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.name == "WoodCube")
+            if (hit.collider.name == "WoodCube"|| hit.collider.name == "MetalCube"|| hit.collider.name == "BlackCube")
             {
-                Debug.Log("Wood");
+                MoveToPlatform(hit.collider.gameObject);
             }
-            if (hit.collider.name == "MetalCube")
-            {
-                Debug.Log("Metal");
-            }
-            if (hit.collider.name == "BlackCube")
-            {
-                Debug.Log("Black");
-            }
-            MoveToPlatform(hit.collider.gameObject);
         }
     }
 
@@ -40,6 +30,8 @@ public class CubeSelector : MonoBehaviour
         GameObject clone = Instantiate(cube);
         clone.transform.SetParent(clone.transform, false);
         clone.transform.position = spawnPoint.transform.position;
+        clone.GetComponent<Rigidbody>().useGravity = true;
+        Destroy(clone, 5f);
     }
 
     // Update is called once per frame
