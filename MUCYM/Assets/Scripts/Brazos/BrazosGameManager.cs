@@ -20,6 +20,7 @@ public class BrazosGameManager : MonoBehaviour
         ui_manager.UpdateMoves(movements);
 
         animator = gameObject.GetComponent<Animator>();
+
     }
 
     
@@ -46,6 +47,19 @@ public class BrazosGameManager : MonoBehaviour
     }
     public void OnButtonPress()
     {
+        animator.SetFloat("Direction", 1);
+        animator.speed = 1;
+        animator.Play("Take 001");
+        /*animator.PlayInFixedTime("Take 001", -1, currentTime);
+        animator.speed = 0.1f;
+        currentTime += 0.1f;
+        Debug.Log(currentTime);*/
+    }
+    
+    public void OnButton2Press()
+    {
+        animator.SetFloat("Direction", -1);
+        animator.speed = 1.3f;
         animator.Play("Take 001");
         /*animator.PlayInFixedTime("Take 001", -1, currentTime);
         animator.speed = 0.1f;
