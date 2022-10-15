@@ -45,27 +45,27 @@ public class BrazosGameManager : MonoBehaviour
     }
     public void OnButtonPress()
     {
-        animator.SetFloat("Direction", 1);
-        animator.speed = 1;
-        animator.Play("Take 001");
-        movementSound.Play();
-        Debug.Log("Pressed 1");
-        /*animator.PlayInFixedTime("Take 001", -1, currentTime);
-        animator.speed = 0.1f;
-        currentTime += 0.1f;
-        Debug.Log(currentTime);*/
+        if (animator.GetFloat("Direction") == -1)
+        {
+            animator.SetFloat("Direction", 1);
+            animator.speed = 1;
+            animator.Play("Take 001");
+            movementSound.Play();
+            Debug.Log("Pressed 1");
+        }
+
     }
     
     public void OnButton2Press()
     {
-        animator.SetFloat("Direction", -1);
-        animator.speed = 1.3f;
-        animator.Play("Take 001");
-        Debug.Log("Pressed 2");
-        /*animator.PlayInFixedTime("Take 001", -1, currentTime);
-        animator.speed = 0.1f;
-        currentTime += 0.1f;
-        Debug.Log(currentTime);*/
+        if (animator.GetFloat("Direction") == -1)
+        {
+            animator.SetFloat("Direction", -1);
+            animator.speed = 1.3f;
+            animator.Play("Take 001");
+            Debug.Log("Pressed 2");
+        }
+
     }
 
 }
