@@ -5,6 +5,7 @@ using UnityEngine;
 public class CubeSelector : MonoBehaviour
 {
     public GameObject spawnPoint;
+    public GameObject referenceCube;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,7 @@ public class CubeSelector : MonoBehaviour
         GameObject clone = Instantiate(cube);
         clone.transform.SetParent(clone.transform, false);
         clone.transform.position = spawnPoint.transform.position;
+        clone.transform.localScale = referenceCube.transform.localScale;
         clone.GetComponent<Rigidbody>().useGravity = true;
         Destroy(clone, 5f);
     }

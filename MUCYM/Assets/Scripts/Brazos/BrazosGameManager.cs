@@ -12,8 +12,6 @@ public class BrazosGameManager : MonoBehaviour
     [HideInInspector]
     public int movements;
 
-    public AudioSource movementSound;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -45,27 +43,18 @@ public class BrazosGameManager : MonoBehaviour
     }
     public void OnButtonPress()
     {
-        if (animator.GetFloat("Direction") == -1)
-        {
             animator.SetFloat("Direction", 1);
             animator.speed = 1;
             animator.Play("Take 001");
-            movementSound.Play();
             Debug.Log("Pressed 1");
-        }
-
     }
     
     public void OnButton2Press()
     {
-        if (animator.GetFloat("Direction") == -1)
-        {
             animator.SetFloat("Direction", -1);
             animator.speed = 1.3f;
             animator.Play("Take 001");
             Debug.Log("Pressed 2");
-        }
-
     }
 
 }
