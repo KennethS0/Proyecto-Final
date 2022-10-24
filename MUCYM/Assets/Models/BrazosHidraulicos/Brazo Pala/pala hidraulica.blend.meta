@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: e09edd6761eec8c46972372a120084a9
+guid: 6f85df993fd6e9448b1c7abf8bff5d0a
 ModelImporter:
   serializedVersion: 20300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -6071287825216747132
+    second: Brazo 1 Mov 1
   externalObjects: {}
   materials:
     materialImportMode: 2
