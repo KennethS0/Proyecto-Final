@@ -19,11 +19,7 @@ public class BrazosGameManager : MonoBehaviour
     void Start()
     {
         ui_manager = GameObject.Find("Canvas").GetComponent<BrazosUI_Manager>();
-        // movements = 0;
-        // ui_manager.UpdateMoves(movements);
-
         animator = gameObject.GetComponent<Animator>();
-
     }
 
     public void StartTimer()
@@ -77,56 +73,102 @@ public class BrazosGameManager : MonoBehaviour
 
     public void OnButtonPress()
     {
-            animator.SetFloat("Direction", 1*animationSpeed);
-            animator.speed = 1;
-            animator.Play("Take 001");
-            MovementSoundUp();
-            Debug.Log("Pressed 1");
+        animator.SetFloat("Direction", 1*animationSpeed);
+        // animator.speed = 1;
+        animator.PlayInFixedTime("Take 001", -1, 0);
+        MovementSoundUp();
     }
     
     public void OnButton2Press()
     {
-            animator.SetFloat("Direction", -1*animationSpeed);
-            animator.speed = 1.3f;
-            animator.Play("Take 001");
-            MovementSoundDown();
-            Debug.Log("Pressed 2");
+        animator.SetFloat("Direction", -1*animationSpeed);
+        // animator.speed = 1.3f;
+        animator.PlayInFixedTime("Take 001", -1, 1);
+        MovementSoundDown();
     }
 
     public void OnButtonTopArmPalaPress()
     {
-        animator.SetFloat("Direction", 1*animationSpeed);
-        animator.speed = 1;
-        animator.Play("Brazo 1 Mov 1");
-        MovementSoundUp();
-        Debug.Log("Pressed 1");
+        animator.SetFloat("DirectionY", 1*animationSpeed);
+        // animator.speed = 1;
+        Debug.Log("Arm is ");
+        Debug.Log(animator.GetBool("isArmUp"));
+        Debug.Log("Pala is ");
+        Debug.Log(animator.GetBool("isPalaUp"));
+        if(!animator.GetBool("isArmUp") && animator.GetBool("isPalaUp"))
+        {
+            animator.PlayInFixedTime("Brazo Mov 1", -1, 0);
+            MovementSoundUp();
+        } 
+        if(!animator.GetBool("isArmUp") && !animator.GetBool("isPalaUp"))
+        {
+            animator.PlayInFixedTime("Brazo Mov 2", -1, 0);
+            MovementSoundUp();
+        }
+        animator.SetBool("isArmUp", true);
     }
 
     public void OnButtonDownArmPalaPress()
     {
-        animator.SetFloat("Direction", -1*animationSpeed);
-        animator.speed = 1.3f;
-        animator.Play("Brazo 1 Mov 1");
-        MovementSoundDown();
-        Debug.Log("Pressed 2");
+        Debug.Log("Arm is ");
+        Debug.Log(animator.GetBool("isArmUp"));
+        Debug.Log("Pala is ");
+        Debug.Log(animator.GetBool("isPalaUp"));
+        animator.SetFloat("DirectionY", -1*animationSpeed);
+        // animator.speed = 1.3f;
+        if(animator.GetBool("isArmUp") && animator.GetBool("isPalaUp"))
+        {
+            animator.PlayInFixedTime("Brazo Mov 1", -1, 0);
+            MovementSoundDown();
+        }
+        if(animator.GetBool("isArmUp") && !animator.GetBool("isPalaUp"))
+        {
+            animator.PlayInFixedTime("Brazo Mov 2", -1, 0);
+            MovementSoundDown();
+        }
+        animator.SetBool("isArmUp", false);
     }
 
     public void OnButtonTopPalaPress()
     {
-        animator.SetFloat("Direction", 1*animationSpeed);
-        animator.speed = 1;
-        animator.Play("Brazo 1 Mov 2");
-        MovementSoundUp();
-        Debug.Log("Pressed 1");
+        Debug.Log("Arm is ");
+        Debug.Log(animator.GetBool("isArmUp"));
+        Debug.Log("Pala is ");
+        Debug.Log(animator.GetBool("isPalaUp"));
+        animator.SetFloat("DirectionX", -1*animationSpeed);
+        // animator.speed = 1.3f;
+        if(!animator.GetBool("isPalaUp") && animator.GetBool("isArmUp"))
+        {
+            animator.PlayInFixedTime("Pala Mov 1", -1, 0);
+            MovementSoundUp();
+        } 
+        if(!animator.GetBool("isPalaUp") && !animator.GetBool("isArmUp"))
+        {
+            animator.PlayInFixedTime("Pala Mov 2", -1, 0);
+            MovementSoundUp();
+        }
+        animator.SetBool("isPalaUp", true);
     }
 
     public void OnButtonDownPalaPress()
     {
-        animator.SetFloat("Direction", -1*animationSpeed);
-        animator.speed = 1.3f;
-        animator.Play("Brazo 1 Mov 2");
-        MovementSoundDown();
-        Debug.Log("Pressed 2");
+        Debug.Log("Arm is ");
+        Debug.Log(animator.GetBool("isArmUp"));
+        Debug.Log("Pala is ");
+        Debug.Log(animator.GetBool("isPalaUp"));
+        animator.SetFloat("DirectionX", 1*animationSpeed);
+        // animator.speed = 1;
+        if(animator.GetBool("isPalaUp") && animator.GetBool("isArmUp"))
+        {
+            animator.PlayInFixedTime("Pala Mov 1", -1, 0);
+            MovementSoundDown();
+        } 
+        if(animator.GetBool("isPalaUp") && !animator.GetBool("isArmUp"))
+        {
+            animator.PlayInFixedTime("Pala Mov 2", -1, 0);
+            MovementSoundDown();
+        }
+        animator.SetBool("isPalaUp", false);
     }
 
 }
