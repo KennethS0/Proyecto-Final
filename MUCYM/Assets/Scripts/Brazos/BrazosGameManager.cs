@@ -10,6 +10,7 @@ public class BrazosGameManager : MonoBehaviour
     private float currentTime = 0;
     public AudioSource movementSoundUp;
     public AudioSource movementSoundDown;
+    private float animationSpeed = 1;
 
     // [HideInInspector]
     // public int movements;
@@ -53,9 +54,30 @@ public class BrazosGameManager : MonoBehaviour
     {
         //animator.speed = 0;
     }
+
+    public void SetAnimationSpeed(string currentCube)
+    {
+        print(currentCube);
+        switch (currentCube)
+        {
+            case "WoodCube":
+                animationSpeed = 0.8f;
+                break;
+            case "MetalCube":
+                animationSpeed = 0.5f;
+                break;
+            case "BlackCube":
+                animationSpeed = 0.3f;
+                break;
+            default:
+                animationSpeed = 1f;
+                break;
+        }
+    }
+
     public void OnButtonPress()
     {
-            animator.SetFloat("Direction", 1);
+            animator.SetFloat("Direction", 1*animationSpeed);
             animator.speed = 1;
             animator.Play("Take 001");
             MovementSoundUp();
@@ -64,7 +86,7 @@ public class BrazosGameManager : MonoBehaviour
     
     public void OnButton2Press()
     {
-            animator.SetFloat("Direction", -1);
+            animator.SetFloat("Direction", -1*animationSpeed);
             animator.speed = 1.3f;
             animator.Play("Take 001");
             MovementSoundDown();

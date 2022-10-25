@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CubeSelector : MonoBehaviour
 {
-    public GameObject spawnPoint;
-    public GameObject referenceCube;
+    public GameObject cube;
+    private string currentCube = "";
+    private Renderer cubeRenderer;
+    public UnityEvent<string> selectedCube = new UnityEvent<string>();
     // Start is called before the first frame update
     void Start()
     {
-        
+        cubeRenderer = cube.GetComponent<MeshRenderer>();
     }
 
     private void RayCastToScreen(Vector2 position)
@@ -28,12 +31,18 @@ public class CubeSelector : MonoBehaviour
 
     private void MoveToPlatform(GameObject cube)
     {
-        GameObject clone = Instantiate(cube);
-        clone.transform.SetParent(clone.transform, false);
-        clone.transform.position = spawnPoint.transform.position;
-        clone.transform.localScale = referenceCube.transform.localScale;
-        clone.GetComponent<Rigidbody>().useGravity = true;
-        Destroy(clone, 5f);
+        if(cube.name == currentCube)
+        {
+            cubeRenderer.enabled = true;
+            cubeRenderer.material = cube.GetComponent<MeshRenderer>().material;
+            currentCube = cube.name;
+        }
+        else
+        {
+            cubeRenderer.enabled = false;
+            currentCube = "";
+        }
+        selectedCube?.Invoke(currentCube);
     }
 
     // Update is called once per frame
