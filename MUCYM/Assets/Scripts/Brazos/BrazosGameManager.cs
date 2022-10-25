@@ -93,4 +93,40 @@ public class BrazosGameManager : MonoBehaviour
             Debug.Log("Pressed 2");
     }
 
+    public void OnButtonTopArmPalaPress()
+    {
+        animator.SetFloat("Direction", 1*animationSpeed);
+        animator.speed = 1;
+        animator.Play("Brazo 1 Mov 1");
+        MovementSoundUp();
+        Debug.Log("Pressed 1");
+    }
+
+    public void OnButtonDownArmPalaPress()
+    {
+        animator.SetFloat("Direction", -1*animationSpeed);
+        animator.speed = 1.3f;
+        animator.Play("Brazo 1 Mov 1");
+        MovementSoundDown();
+        Debug.Log("Pressed 2");
+    }
+
+    public void OnButtonTopPalaPress()
+    {
+        animator.SetFloat("Direction", 1*animationSpeed);
+        animator.speed = 1;
+        animator.Play("Brazo 1 Mov 2");
+        MovementSoundUp();
+        Debug.Log("Pressed 1");
+    }
+
+    public void OnButtonDownPalaPress()
+    {
+        animator.SetFloat("Direction", -1*animationSpeed);
+        animator.speed = 1.3f;
+        animator.Play("Brazo 1 Mov 2");
+        MovementSoundDown();
+        Debug.Log("Pressed 2");
+    }
+
 }
