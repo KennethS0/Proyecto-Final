@@ -935,7 +935,7 @@ Transform:
   m_GameObject: {fileID: 890275035}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.28152058, y: 0.020999908, z: -0.322}
-  m_LocalScale: {x: 0.09325224, y: 0.0151716005, z: 0.11093252}
+  m_LocalScale: {x: 0.15, y: 0.0151716005, z: 0.15}
   m_Children:
   - {fileID: 2102101536}
   m_Father: {fileID: 7619858867108642327}
@@ -975,7 +975,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 3217170657426821061}
         m_TargetAssemblyTypeName: ArmSoundEffect, Assembly-CSharp
-        m_MethodName: MovementSoundDown
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1091,7 +1091,7 @@ Transform:
   m_GameObject: {fileID: 903938355}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.28, y: 0.020999908, z: 0.252604}
-  m_LocalScale: {x: 0.09325224, y: 0.0151716005, z: 0.11}
+  m_LocalScale: {x: 0.15, y: 0.0151716005, z: 0.15}
   m_Children:
   - {fileID: 430711235}
   m_Father: {fileID: 7619858867108642327}
@@ -1131,7 +1131,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 3217170657426821061}
         m_TargetAssemblyTypeName: ArmSoundEffect, Assembly-CSharp
-        m_MethodName: MovementSoundUp
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3009,7 +3009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3217170657426821059}
   m_LocalRotation: {x: 0.49717963, y: 0.5028045, z: 0.5028045, w: 0.49717972}
-  m_LocalPosition: {x: 0.03, y: 0.448, z: -0.183}
+  m_LocalPosition: {x: 0.03, y: 0.448, z: -0.118}
   m_LocalScale: {x: 0.07631971, y: 0.106055535, z: 0.1036028}
   m_Children:
   - {fileID: 567335916900646218}
@@ -3073,7 +3073,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04df470837bb1e745895e381c43d587e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movements: 0
+  movementSoundUp: {fileID: 0}
+  movementSoundDown: {fileID: 0}
 --- !u!114 &3217170657426821061
 MonoBehaviour:
   m_ObjectHideFlags: 0

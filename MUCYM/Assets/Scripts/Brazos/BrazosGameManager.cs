@@ -8,16 +8,18 @@ public class BrazosGameManager : MonoBehaviour
     private BrazosUI_Manager ui_manager;
     private Animator animator;
     private float currentTime = 0;
+    public AudioSource movementSoundUp;
+    public AudioSource movementSoundDown;
 
-    [HideInInspector]
-    public int movements;
+    // [HideInInspector]
+    // public int movements;
 
     // Start is called before the first frame update
     void Start()
     {
         ui_manager = GameObject.Find("Canvas").GetComponent<BrazosUI_Manager>();
-        movements = 0;
-        ui_manager.UpdateMoves(movements);
+        // movements = 0;
+        // ui_manager.UpdateMoves(movements);
 
         animator = gameObject.GetComponent<Animator>();
 
@@ -32,9 +34,19 @@ public class BrazosGameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        movements = 0;
-        ui_manager.UpdateMoves(movements);
+        // movements = 0;
+        // ui_manager.UpdateMoves(movements);
         ui_manager.ResetTimer();
+    }
+    
+    public void MovementSoundUp()
+    {
+        movementSoundUp.Play();
+    }
+
+    public void MovementSoundDown()
+    {
+        movementSoundDown.Play();
     }
 
     public void OnButtonRelease()
@@ -46,6 +58,7 @@ public class BrazosGameManager : MonoBehaviour
             animator.SetFloat("Direction", 1);
             animator.speed = 1;
             animator.Play("Take 001");
+            MovementSoundUp();
             Debug.Log("Pressed 1");
     }
     
@@ -54,6 +67,7 @@ public class BrazosGameManager : MonoBehaviour
             animator.SetFloat("Direction", -1);
             animator.speed = 1.3f;
             animator.Play("Take 001");
+            MovementSoundDown();
             Debug.Log("Pressed 2");
     }
 

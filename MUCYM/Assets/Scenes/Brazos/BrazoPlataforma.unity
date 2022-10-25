@@ -38,8 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.004030722, g: 0.00022010593, b: 0.000000054053547,
-    a: 1}
+  m_IndirectSpecularColor: {r: 0.41899097, g: 0.44768608, b: 0.46560425, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -217,85 +216,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -59.4, y: 31.68, z: 0}
---- !u!1 &135604767
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 135604770}
-  - component: {fileID: 135604769}
-  - component: {fileID: 135604768}
-  m_Layer: 5
-  m_Name: LabelMovements
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &135604768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135604767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Movimientos:'
---- !u!222 &135604769
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135604767}
-  m_CullTransparentMesh: 0
---- !u!224 &135604770
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135604767}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1687929121}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -46.145}
-  m_SizeDelta: {x: 179.70276, y: 69.85537}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &151120257
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +314,7 @@ RectTransform:
   m_Children:
   - {fileID: 1208415836}
   m_Father: {fileID: 1687929121}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -698,7 +618,7 @@ RectTransform:
   - {fileID: 312023563}
   - {fileID: 1696420032}
   m_Father: {fileID: 1687929121}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 11.09}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1281,7 +1201,7 @@ MonoBehaviour:
     type: 2}
   VirtualButtonPressed: {fileID: 2100000, guid: 27b793e0582bd674599881c5ec96f787,
     type: 2}
-  ButtonReleaseTimeDelay: 1
+  ButtonReleaseTimeDelay: 0.5
   ButtonPressed:
     m_PersistentCalls:
       m_Calls:
@@ -1299,7 +1219,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 6128962479000184371}
         m_TargetAssemblyTypeName: ArmSoundEffect, Assembly-CSharp
-        m_MethodName: MovementSoundUp
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1437,7 +1357,7 @@ MonoBehaviour:
     type: 2}
   VirtualButtonPressed: {fileID: 2100000, guid: 4699736fbc339374e8c4e4d30fbe79a0,
     type: 2}
-  ButtonReleaseTimeDelay: 1
+  ButtonReleaseTimeDelay: 0.5
   ButtonPressed:
     m_PersistentCalls:
       m_Calls:
@@ -1455,7 +1375,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 6128962479000184371}
         m_TargetAssemblyTypeName: ArmSoundEffect, Assembly-CSharp
-        m_MethodName: MovementSoundDown
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1801,7 +1721,7 @@ RectTransform:
   - {fileID: 1237365350}
   - {fileID: 1780621471}
   m_Father: {fileID: 1687929121}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -2328,7 +2248,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1900157523}
-  - {fileID: 135604770}
   - {fileID: 1437213494}
   - {fileID: 183073872}
   - {fileID: 2126476393}
@@ -2844,25 +2763,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932497062}
   m_CullTransparentMesh: 0
---- !u!114 &2117414667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7619858867674248412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 7619858867674248409}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: Tablero
-  mDatasetName: Vuforia/MUCYM-Targets.xml
-  mCastedBehaviour: {fileID: 7619858867674248409}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1 &2126476392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2894,7 +2794,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1687929121}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2995,25 +2895,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126476392}
   m_CullTransparentMesh: 0
---- !u!114 &215502531312872306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7619858867674248412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 7619858867674248409}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: Tablero
-  mDatasetName: Vuforia/MUCYM-Targets.xml
-  mCastedBehaviour: {fileID: 7619858867674248409}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!4 &350046925172775638
 Transform:
   m_ObjectHideFlags: 0
@@ -3427,7 +3308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &3912639328379733623
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3743,7 +3624,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04df470837bb1e745895e381c43d587e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movements: 0
+  movementSoundUp: {fileID: 6128962479000184373}
+  movementSoundDown: {fileID: 6128962479000184372}
 --- !u!114 &6128962479000184371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3769,7 +3651,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b895da21c41746a4fb0cc2fd3a05514c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3960,7 +3842,7 @@ Animator:
   m_GameObject: {fileID: 6128962479000184369}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 64eef40138070b346a1f69024589f3d7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4168,7 +4050,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 215502531312872306}
+  mPreview: {fileID: 7619858867674248413}
 --- !u!114 &7619858867674248410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4224,8 +4106,7 @@ GameObject:
   - component: {fileID: 7619858867674248408}
   - component: {fileID: 7619858867674248409}
   - component: {fileID: 7619858867674248410}
-  - component: {fileID: 2117414667}
-  - component: {fileID: 215502531312872306}
+  - component: {fileID: 7619858867674248413}
   m_Layer: 0
   m_Name: ImageTarget
   m_TagString: Untagged
@@ -4233,6 +4114,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7619858867674248413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7619858867674248412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 7619858867674248409}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: Tablero
+  mDatasetName: Vuforia/MUCYM-Targets.xml
+  mCastedBehaviour: {fileID: 7619858867674248409}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!4 &7652746994712946670
 Transform:
   m_ObjectHideFlags: 0
