@@ -5,14 +5,16 @@ using UnityEngine.Events;
 
 public class CubeSelector : MonoBehaviour
 {
-    public GameObject cube;
+    public GameObject referenceCube;
+    public GameObject spawnPoint;
+    public GameObject endPoint;
     private string currentCube = "";
-    private Renderer cubeRenderer;
     public UnityEvent<string> selectedCube = new UnityEvent<string>();
     // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
-        cubeRenderer = cube.GetComponent<MeshRenderer>();
+        referenceCube.transform.localPosition = endPoint.transform.localPosition;
     }
 
     private void RayCastToScreen(Vector2 position)
@@ -31,16 +33,19 @@ public class CubeSelector : MonoBehaviour
 
     private void MoveToPlatform(GameObject cube)
     {
-        if(cube.name == currentCube)
+
+        if (cube.name == currentCube)
         {
-            cubeRenderer.enabled = true;
-            cubeRenderer.material = cube.GetComponent<MeshRenderer>().material;
-            currentCube = cube.name;
+
+            referenceCube.transform.localPosition = endPoint.transform.localPosition;
+            currentCube = "";
         }
         else
         {
-            cubeRenderer.enabled = false;
-            currentCube = "";
+
+            referenceCube.transform.localPosition = spawnPoint.transform.localPosition;
+            referenceCube.GetComponent<Renderer>().material = cube.GetComponent<MeshRenderer>().material;
+            currentCube = cube.name;
         }
         selectedCube?.Invoke(currentCube);
     }

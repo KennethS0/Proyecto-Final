@@ -53,7 +53,8 @@ public class BrazosGameManager : MonoBehaviour
 
     public void SetAnimationSpeed(string currentCube)
     {
-        print(currentCube);
+        Debug.Log(currentCube);
+        Debug.Log("SETTING SPEED");
         switch (currentCube)
         {
             case "WoodCube":
@@ -75,6 +76,7 @@ public class BrazosGameManager : MonoBehaviour
     {
         animator.SetFloat("Direction", 1*animationSpeed);
         // animator.speed = 1;
+
         animator.PlayInFixedTime("Take 001", -1, 0);
         MovementSoundUp();
     }
@@ -83,18 +85,13 @@ public class BrazosGameManager : MonoBehaviour
     {
         animator.SetFloat("Direction", -1*animationSpeed);
         // animator.speed = 1.3f;
-        animator.PlayInFixedTime("Take 001", -1, 1);
+        animator.PlayInFixedTime("Take 001", -1, 7);
         MovementSoundDown();
     }
 
     public void OnButtonTopArmPalaPress()
     {
         animator.SetFloat("DirectionY", 1*animationSpeed);
-        // animator.speed = 1;
-        Debug.Log("Arm is ");
-        Debug.Log(animator.GetBool("isArmUp"));
-        Debug.Log("Pala is ");
-        Debug.Log(animator.GetBool("isPalaUp"));
         if(!animator.GetBool("isArmUp") && animator.GetBool("isPalaUp"))
         {
             animator.PlayInFixedTime("Brazo Mov 1", -1, 0);
@@ -110,20 +107,16 @@ public class BrazosGameManager : MonoBehaviour
 
     public void OnButtonDownArmPalaPress()
     {
-        Debug.Log("Arm is ");
-        Debug.Log(animator.GetBool("isArmUp"));
-        Debug.Log("Pala is ");
-        Debug.Log(animator.GetBool("isPalaUp"));
+
         animator.SetFloat("DirectionY", -1*animationSpeed);
-        // animator.speed = 1.3f;
         if(animator.GetBool("isArmUp") && animator.GetBool("isPalaUp"))
         {
-            animator.PlayInFixedTime("Brazo Mov 1", -1, 0);
+            animator.PlayInFixedTime("Brazo Mov 1", -1, 4);
             MovementSoundDown();
         }
         if(animator.GetBool("isArmUp") && !animator.GetBool("isPalaUp"))
         {
-            animator.PlayInFixedTime("Brazo Mov 2", -1, 0);
+            animator.PlayInFixedTime("Brazo Mov 2", -1, 4);
             MovementSoundDown();
         }
         animator.SetBool("isArmUp", false);
@@ -131,20 +124,16 @@ public class BrazosGameManager : MonoBehaviour
 
     public void OnButtonTopPalaPress()
     {
-        Debug.Log("Arm is ");
-        Debug.Log(animator.GetBool("isArmUp"));
-        Debug.Log("Pala is ");
-        Debug.Log(animator.GetBool("isPalaUp"));
+
         animator.SetFloat("DirectionX", -1*animationSpeed);
-        // animator.speed = 1.3f;
         if(!animator.GetBool("isPalaUp") && animator.GetBool("isArmUp"))
         {
-            animator.PlayInFixedTime("Pala Mov 1", -1, 0);
+            animator.PlayInFixedTime("Pala Mov 1", -1, 4);
             MovementSoundUp();
         } 
         if(!animator.GetBool("isPalaUp") && !animator.GetBool("isArmUp"))
         {
-            animator.PlayInFixedTime("Pala Mov 2", -1, 0);
+            animator.PlayInFixedTime("Pala Mov 2", -1, 4);
             MovementSoundUp();
         }
         animator.SetBool("isPalaUp", true);
@@ -152,12 +141,8 @@ public class BrazosGameManager : MonoBehaviour
 
     public void OnButtonDownPalaPress()
     {
-        Debug.Log("Arm is ");
-        Debug.Log(animator.GetBool("isArmUp"));
-        Debug.Log("Pala is ");
-        Debug.Log(animator.GetBool("isPalaUp"));
+
         animator.SetFloat("DirectionX", 1*animationSpeed);
-        // animator.speed = 1;
         if(animator.GetBool("isPalaUp") && animator.GetBool("isArmUp"))
         {
             animator.PlayInFixedTime("Pala Mov 1", -1, 0);
