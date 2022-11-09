@@ -9,6 +9,7 @@ TagManager:
   - Number
   - PuzzlePiece
   - PuzzleWall
+  - ArmCube
   layers:
   - Default
   - TransparentFX

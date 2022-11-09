@@ -5,17 +5,10 @@ using UnityEngine.Events;
 
 public class CubeSelector : MonoBehaviour
 {
-    public GameObject referenceCube;
-    public GameObject spawnPoint;
-    public GameObject endPoint;
     private string currentCube = "";
+    public GameObject[] cubes;
     public UnityEvent<string> selectedCube = new UnityEvent<string>();
-    // Start is called before the first frame update
 
-    private void Awake()
-    {
-        referenceCube.transform.localPosition = endPoint.transform.localPosition;
-    }
 
     private void RayCastToScreen(Vector2 position)
     {
@@ -24,29 +17,27 @@ public class CubeSelector : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.name == "WoodCube"|| hit.collider.name == "MetalCube"|| hit.collider.name == "BlackCube")
-            {
+
                 MoveToPlatform(hit.collider.gameObject);
-            }
         }
     }
 
     private void MoveToPlatform(GameObject cube)
     {
-
-        if (cube.name == currentCube)
-        {
-
-            referenceCube.transform.localPosition = endPoint.transform.localPosition;
+        if (currentCube == cube.name)
             currentCube = "";
-        }
         else
-        {
-
-            referenceCube.transform.localPosition = spawnPoint.transform.localPosition;
-            referenceCube.GetComponent<Renderer>().material = cube.GetComponent<MeshRenderer>().material;
             currentCube = cube.name;
-        }
+
+        foreach (GameObject aCube in cubes)
+            {
+                if (aCube.name == currentCube)
+                {
+                    aCube.SetActive(true);
+                }
+                else
+                    aCube.SetActive(false);
+            }  
         selectedCube?.Invoke(currentCube);
     }
 
